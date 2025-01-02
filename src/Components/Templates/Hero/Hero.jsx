@@ -57,9 +57,9 @@ export default function Hero() {
                 <CTAButton>Contact Us</CTAButton>
               </div>
               <div className="right">
-                <img className="main-img" src="/images/hero.png" />
-                <img className="cat" src="/images/cat.png" />
-                <img className="dog" src="/images/dog.png" />
+                <img className="main-img" src="/images/hero.webp" />
+                <img className="cat" src="/images/cat.webp" />
+                <img className="dog" src="/images/dog.webp" />
               </div>
             </RowWrapper>
           </MainSlide>
@@ -88,7 +88,7 @@ export default function Hero() {
                   $bgColor="var(--primary-color-200)"
                   $position={{ top: "50%", right: "40%" }}
                 />
-                <img className="main-img" src="/images/dog-bed.png" />
+                <img className="main-img" src="/images/dog-bed.webp" />
               </div>
             </RowWrapper>
           </SecondSlide>

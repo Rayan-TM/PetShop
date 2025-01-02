@@ -15,8 +15,8 @@ export default function About() {
       className={isVisible ? "animate" : ""}
     >
       <div className="img-container">
-        <img className="dog" src="/images/dog-food.png" />
-        <img className="food" src="/images/food.png" />
+        <img className="dog" src="/images/dog-food.webp" />
+        <img className="food" src="/images/food.webp" />
       </div>
       <div className="content">
         <h2>A little about us</h2>
