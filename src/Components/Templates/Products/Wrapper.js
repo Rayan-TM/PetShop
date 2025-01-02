@@ -19,8 +19,6 @@ const Wrapper = styled.section`
 
   .container {
     transform: skew(-40deg);
-    width: 1200px;
-    margin-inline: auto;
     text-align: center;
   }
 
@@ -32,10 +30,24 @@ const Wrapper = styled.section`
     margin-block: 3rem;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
   }
 
-  
+  @media (max-width: 992px) {
+    transform: skew(20deg);
+
+    .container {
+      transform: skew(-20deg);
+    }
+  }
+
+  @media (max-width: 992px) {
+    transform: skew(15deg);
+
+    .container {
+      transform: skew(-15deg);
+    }
+  }
 `;
 
 export default Wrapper;

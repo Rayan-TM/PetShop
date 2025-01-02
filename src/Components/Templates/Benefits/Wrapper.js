@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   position: relative;
-  height: fit-content;
   padding-block: 4rem;
 
   &::before {
@@ -17,14 +16,19 @@ const Wrapper = styled.section`
 
   .container {
     position: relative;
-    max-width: 1200px;
     align-items: stretch;
-    margin-inline: auto;
     top: 50%;
     gap: 2rem;
   }
 
-  
+  @media (max-width: 992px) {
+    &::before {
+      display: none;
+    }
+    .container {
+      flex-wrap: wrap;
+    }
+  }
 `;
 
 export default Wrapper;

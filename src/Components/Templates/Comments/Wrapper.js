@@ -22,18 +22,16 @@ const Wrapper = styled.section`
 
     &.top {
       transform: rotate(180deg);
-      top: -20px;
+      top: -5px;
     }
 
     &.bottom {
-      bottom: -10px;
+      bottom: -5px;
     }
   }
 
   .container {
-    width: 1200px;
     padding-block: 5rem;
-    margin-inline: auto;
   }
 
   .swiper {
@@ -62,6 +60,10 @@ const Wrapper = styled.section`
       z-index: 1;
       transform: scale(1.3);
       opacity: 1;
+
+      @media (max-width: 992px) {
+        transform: unset;
+      }
     }
 
     .fa-quote-right,

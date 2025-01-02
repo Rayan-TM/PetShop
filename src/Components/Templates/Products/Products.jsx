@@ -4,6 +4,7 @@ import Wrapper from "./Wrapper";
 import ProductsContainer from "./ProductsContainer";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
 import Category from "./Category";
+import Container from "../../../Shared/Container";
 
 export default function Products() {
   const [container, isVisible] = useAnimateOnScroll({ threshold: 0 });
@@ -28,7 +29,7 @@ export default function Products() {
 
   return (
     <Wrapper ref={container} className={isVisible ? "animate" : ""}>
-      <div className="container">
+      <Container className="container">
         <h2>what we have for your pet</h2>
         <div className="categories">
           {categories.map((category, index) => (
@@ -79,7 +80,7 @@ export default function Products() {
             </div>
           ))}
         </ProductsContainer>
-      </div>
+      </Container>
     </Wrapper>
   );
 }

@@ -6,10 +6,7 @@ const MainSlide = styled(RowWrapper)`
   height: 100%;
 
   & > div {
-    max-width: 1200px;
-    width: 100%;
     height: 100%;
-    margin-inline: auto;
 
     .content {
       width: 40%;
@@ -46,6 +43,7 @@ const MainSlide = styled(RowWrapper)`
   .main-img {
     bottom: 0;
     right: 0;
+    width: 150%;
   }
 
   .cat {
@@ -61,6 +59,46 @@ const MainSlide = styled(RowWrapper)`
     right: 0;
     width: 170px;
     border-radius: 33% 67% 47% 53% / 63% 64% 36% 37%;
+  }
+
+  @media (max-width: 768px) {
+    & > div {
+      .content {
+        width: 70%;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .main-img {
+      bottom: 0;
+      right: 0;
+      width: 200%;
+    }
+
+    .cat {
+      width: 150px;
+    }
+
+    .dog {
+      width: 130px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    & > div {
+      flex-direction: column;
+      text-align: center;
+      .content {
+        width: 100%;
+      }
+    }
+
+    .cat, .dog{
+      display: none;
+    }
   }
 `;
 

@@ -3,13 +3,14 @@ import Wrapper from "./Wrapper";
 import { benefits } from "../../../fakeData";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
 import Benefit from "./Benefit.js";
+import Container from "../../../Shared/Container.js";
 
 export default function Benefits() {
   const [container, isVisible] = useAnimateOnScroll({});
 
   return (
     <Wrapper ref={container}>
-      <RowWrapper className="container">
+      <RowWrapper as={Container} className="container">
         {benefits.map((benefit, index) => (
           <Benefit
             className="benefit"

@@ -105,6 +105,8 @@ const ProductsContainer = styled.div`
 
     .content {
       padding: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     .title {
@@ -132,6 +134,26 @@ const ProductsContainer = styled.div`
       &:hover {
         background-color: var(--secondary-color);
       }
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+
+    .product {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product {
+      width: 47%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .product {
+      width: 100%;
     }
   }
 `;

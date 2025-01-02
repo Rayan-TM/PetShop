@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Stars from "../../Modules/Stars/Stars";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
+import Container from "../../../Shared/Container";
 
 export default function Comments() {
   const [container, isVisible] = useAnimateOnScroll({ threshold: 0.1 });
@@ -34,11 +35,10 @@ export default function Comments() {
           d="M0,60L13.3,58.3C26.7,57,53,53,80,53.3C106.7,53,133,57,160,56.7C186.7,57,213,53,240,51.7C266.7,50,293,50,320,55C346.7,60,373,70,400,75C426.7,80,453,80,480,66.7C506.7,53,533,27,560,23.3C586.7,20,613,40,640,50C666.7,60,693,60,720,61.7C746.7,63,773,67,800,58.3C826.7,50,853,30,880,30C906.7,30,933,50,960,48.3C986.7,47,1013,23,1040,26.7C1066.7,30,1093,60,1120,60C1146.7,60,1173,30,1200,18.3C1226.7,7,1253,13,1280,16.7C1306.7,20,1333,20,1360,16.7C1386.7,13,1413,7,1440,3.3C1466.7,0,1493,0,1520,13.3C1546.7,27,1573,53,1600,53.3C1626.7,53,1653,27,1680,28.3C1706.7,30,1733,60,1760,61.7C1786.7,63,1813,37,1840,31.7C1866.7,27,1893,43,1907,51.7L1920,60L1920,100L1906.7,100C1893.3,100,1867,100,1840,100C1813.3,100,1787,100,1760,100C1733.3,100,1707,100,1680,100C1653.3,100,1627,100,1600,100C1573.3,100,1547,100,1520,100C1493.3,100,1467,100,1440,100C1413.3,100,1387,100,1360,100C1333.3,100,1307,100,1280,100C1253.3,100,1227,100,1200,100C1173.3,100,1147,100,1120,100C1093.3,100,1067,100,1040,100C1013.3,100,987,100,960,100C933.3,100,907,100,880,100C853.3,100,827,100,800,100C773.3,100,747,100,720,100C693.3,100,667,100,640,100C613.3,100,587,100,560,100C533.3,100,507,100,480,100C453.3,100,427,100,400,100C373.3,100,347,100,320,100C293.3,100,267,100,240,100C213.3,100,187,100,160,100C133.3,100,107,100,80,100C53.3,100,27,100,13,100L0,100Z"
         ></path>
       </svg>
-      <div className="container">
+      <Container className="container">
         <h2>What do our customers say?</h2>
 
         <Swiper
-          slidesPerView={3}
           loop
           autoplay={{
             delay: 3500,
@@ -49,6 +49,15 @@ export default function Comments() {
             clickable: true,
           }}
           modules={[Pagination, Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+
+            992: {
+              slidesPerView: 3,
+            },
+          }}
           className="mySwiper"
         >
           {comments.map((comment) => (
@@ -67,7 +76,7 @@ export default function Comments() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </Container>
     </Wrapper>
   );
 }

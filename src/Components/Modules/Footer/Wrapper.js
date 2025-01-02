@@ -12,15 +12,11 @@ const Wrapper = styled.footer`
     }
   }
 
-  .container {
-    width: 1200px;
-    margin-inline: auto;
-  }
-
   .columns {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 3rem;
     margin-top: 5rem;
 
     .column {
@@ -80,7 +76,6 @@ const Wrapper = styled.footer`
 
     .social {
       display: flex;
-      justify-content: center;
       margin-top: 1rem;
       gap: 1rem;
       font-size: 1.3rem;
@@ -134,6 +129,7 @@ const Wrapper = styled.footer`
         border: none;
         outline: none;
         padding: 1rem 1.3rem;
+        width: 100%;
       }
 
       button {
@@ -148,6 +144,31 @@ const Wrapper = styled.footer`
         &:hover {
           background-color: var(--secondary-color-200);
         }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .columns {
+      flex-wrap: wrap;
+
+      .column {
+        width: 46%;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .discount-container {
+      padding-inline: 1.5rem;
+
+      p {
+        width: unset;
+      }
+    }
+    .columns {
+      .column {
+        width: 100%;
       }
     }
   }

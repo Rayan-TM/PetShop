@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 const Wrapper = styled.header`
-  padding: 0.6rem 1.5rem;
+  padding-block: 0.6rem;
 
-  .container {
-    width: 1200px;
-    margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
   }
-
- 
 
   .right {
     gap: 1rem;

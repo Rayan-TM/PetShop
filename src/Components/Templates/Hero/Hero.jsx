@@ -9,6 +9,7 @@ import Circle from "../../../Shared/Circle";
 import SecondSlide from "./SecondSlide";
 import SwiperButton from "../../Modules/SwiperButton/SwiperButton";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
+import Container from "../../../Shared/Container";
 
 export default function Hero() {
   const [container, isVisible] = useAnimateOnScroll({ initialStatus: true });
@@ -34,9 +35,9 @@ export default function Hero() {
           }
         }}
       >
-        <SwiperSlide className={`main-slide`}>
+        <SwiperSlide className="main-slide">
           <MainSlide>
-            <RowWrapper>
+            <RowWrapper as={Container}>
               <div className="content">
                 <Circle
                   className="corner-circle"
@@ -63,9 +64,9 @@ export default function Hero() {
             </RowWrapper>
           </MainSlide>
         </SwiperSlide>
-        <SwiperSlide className={`second-slide`}>
+        <SwiperSlide className="second-slide">
           <SecondSlide>
-            <RowWrapper>
+            <RowWrapper as={Container}>
               <div className="content">
                 <small>DOG BED</small>
                 <h2>Dog Bed for Medium Dogs</h2>
@@ -74,7 +75,7 @@ export default function Hero() {
                   className="text-circle"
                   $size="200px"
                   $bgColor="var(--primary-color)"
-                  $position={{ top: "20%", left: "5%" }}
+                  $position={{ top: "-20%", left: "5%" }}
                 />
                 <CTAButton $hoverBgColor="var(--secondary-color)">
                   SHOP NOW

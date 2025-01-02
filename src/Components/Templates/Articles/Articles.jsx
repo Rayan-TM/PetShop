@@ -2,11 +2,13 @@ import { articles } from "../../../fakeData";
 import Wrapper from "./Wrapper";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
 import Article from "./Article";
+import Container from "../../../Shared/Container";
+import RowWrapper from "../../../Shared/RowWrapper";
 
 export default function Articles() {
   const [container, isVisible] = useAnimateOnScroll({ threshold: 0 });
   return (
-    <Wrapper ref={container} className={isVisible ? "animated" : ""}>
+    <Wrapper as={Container} ref={container} className={isVisible ? "animated" : ""}>
       <h2>Pet Blog</h2>
       <div className="articles">
         {articles.map((article, index) => (
@@ -27,7 +29,7 @@ export default function Articles() {
               <h3>{article.title}</h3>
               <p>{article.description}</p>
             </div>
-            <div className="footer">
+            <RowWrapper className="footer">
               <div>
                 <i className="fa-solid fa-clock"></i>
                 <span>{article.time}</span>
@@ -36,7 +38,7 @@ export default function Articles() {
                 <i className="fa-solid fa-comment-dots"></i>
                 <span>{article.commentsCount} comments</span>
               </div>
-            </div>
+            </RowWrapper>
           </Article>
         ))}
       </div>

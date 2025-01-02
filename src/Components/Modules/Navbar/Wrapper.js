@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Navbar = styled.nav`
+const Wrapper = styled.nav`
   .menu {
     margin-left: -1rem;
     li {
@@ -69,6 +69,46 @@ const Navbar = styled.nav`
       }
     }
   }
+
+  &.mobile-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    inset: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 100;
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      height: 3rem;
+      width: 3rem;
+      padding: 0;
+    }
+
+    .options {
+      min-width: 200px;
+      margin-inline: auto;
+    }
+
+    .sign-in {
+      width: fit-content;
+      margin-inline: auto;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        color: #fff;
+      }
+    }
+  }
 `;
 
-export default Navbar;
+export default Wrapper;

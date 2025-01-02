@@ -1,8 +1,9 @@
-import Navbar from "../Header/Navbar";
+import Navbar from "../Navbar/Wrapper";
 import Logo from "../Logo/Logo";
 import Wrapper from "./Wrapper";
 import useAnimateOnScroll from "../../../Hooks/useAnimateOnScroll";
 import Column from "./Column";
+import Container from "../../../Shared/Container";
 
 export default function Footer() {
   const [container, isVisible] = useAnimateOnScroll({ threshold: 0 });
@@ -12,7 +13,7 @@ export default function Footer() {
 
   return (
     <Wrapper ref={container} className={isVisible ? "animate" : ""}>
-      <div className="container">
+      <Container>
         <div className="discount-container">
           <h2>Get discount instantly</h2>
           <p>
@@ -80,7 +81,7 @@ export default function Footer() {
             </ul>
           </Column>
         </div>
-      </div>
+      </Container>
     </Wrapper>
   );
 }

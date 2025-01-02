@@ -3,8 +3,7 @@ import { Heading2 } from "../../../Shared/Heading2";
 import { text } from "../../../Shared/Animations";
 
 const Wrapper = styled.section`
-  width: 1200px;
-  margin: 5rem auto;
+  margin-block: 5rem;
 
   &.animated {
     h2 {
@@ -22,9 +21,11 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     gap: 1rem;
-  }
 
-  
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
 `;
 
 export default Wrapper;

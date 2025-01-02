@@ -59,6 +59,14 @@ const Benefit = styled.div`
       font-size: 1.3rem;
       transition: all 0.3s ease;
     }
+
+    @media (max-width: 992px) {
+      width: 46%;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   `}
 `;
 

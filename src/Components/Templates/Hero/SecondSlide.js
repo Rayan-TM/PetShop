@@ -7,21 +7,19 @@ const SecondSlide = styled(RowWrapper)`
   height: 100%;
 
   & > div {
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
-    margin-inline: auto;
-
     .content {
-      width: 40%;
+      position: relative;
+      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      z-index: 1;
 
       small {
         font-weight: bold;
         color: var(--secondary-color-200);
+        z-index: 1;
       }
 
       h2 {
@@ -41,9 +39,33 @@ const SecondSlide = styled(RowWrapper)`
     }
 
     .right {
+      width: 50%;
       .main-img {
         position: relative;
+        width: 100%;
         z-index: 1;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    & > div {
+      flex-direction: column;
+      gap: 3rem;
+
+      .content {
+        width: 100%;
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    & > div {
+      .right {
+        width: 70%;
       }
     }
   }

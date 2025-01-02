@@ -4,10 +4,17 @@ import { move } from "../../../Shared/Animations";
 const Article = styled.article`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   background-color: #fff;
-  width: 25%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+
+  @media (max-width: 992px) {
+    width: 47%;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 
   &:hover img {
     transform: scale(1.1);
@@ -85,9 +92,10 @@ const Article = styled.article`
 
   .footer {
     color: var(--secondary-color);
+    font-size: 0.9rem;
     padding: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: auto;
     border-top: 1px solid var(--light);
 
